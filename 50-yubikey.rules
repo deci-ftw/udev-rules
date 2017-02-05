@@ -1,0 +1,5 @@
+# Yubico USB
+SUBSYSTEM=="usb", ATTR{idVendor}=="1050", ATTRS{idProduct}=="0211", MODE="0664", GROUP="plugdev"
+
+# Yubico HID
+SUBSYSTEM=="hidraw", SUBSYSTEMS=="usb", ATTRS{idVendor}=="1050", MODE="0660", GROUP="plugdev"
